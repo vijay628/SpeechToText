@@ -5,8 +5,8 @@ import useClipboard from 'react-use-clipboard';
 
 const SpeechTranscript = () => {
   const [textToCopy,setTextToCopy] = useState('');
-  const [isCopied,setCopied] = useClipboard(textToCopy);
-  
+  const [,setCopied] = useClipboard(textToCopy);
+
   const listen = ()=>{
    SpeechRecognition.startListening({continuous: true, language: 'en-IN'});
   }
