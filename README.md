@@ -1,3 +1,5 @@
+<img width="959" alt="image" src="https://github.com/jack-coder5416/SpeechToText/assets/79541495/5cd196dd-2c9b-49cb-bc09-e2f8b4aed96c">
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
