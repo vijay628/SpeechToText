@@ -6,42 +6,11 @@ import jsPDF from 'jspdf';
 import { saveAs } from 'file-saver';
 
 const SpeechTranscript = () => {
-  const [textToCopy, setTextToCopy] = useState('');
-  const [isCopied, setCopied] = useClipboard(textToCopy);
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-
-  const saveAsPdf = () => {
-    if (transcript) {
-      const pdf = new jsPDF();
-      pdf.setFontSize(12);
-      pdf.text(transcript, 15, 20);
-      pdf.save("transcript.pdf");
-    }
-    setShowDropdown(false);
-  };
-
-  const saveAsTxt = () => {
-    if (transcript) {
-      const blob = new Blob([transcript], { type: 'text/plain;charset=utf-8' });
-      saveAs(blob, "transcript.txt");
-    }
-    setShowDropdown(false);
-  };
-
-  const saveAsDoc = () => {
-    if (transcript) {
-      const blob = new Blob([transcript], { type: 'text/plain;charset=utf-8' });
-      saveAs(blob, "transcript.docs");
-    }
-    setShowDropdown(false);
-  };
+  const [textToCopy,setTextToCopy] = useState('');
+  const [isCopied,setCopied] = useClipboard(textToCopy);
   
-  const listen = () => {
-    SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+  const listen = ()=>{
+   SpeechRecognition.startListening({continuous: true, language: 'en-IN'});
   }
   const stopListen = () => {
     SpeechRecognition.stopListening();
