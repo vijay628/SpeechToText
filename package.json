@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "file-saver": "^2.0.5",
+    "jspdf": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-speech-recognition": "^3.10.0",
@@ -20,9 +22,11 @@
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-react": "^7.22.15",
+    "@types/file-saver": "^2.0.7",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@types/react-speech-recognition": "^3.9.3",
+    "@types/regenerator-runtime": "^0.13.5",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
